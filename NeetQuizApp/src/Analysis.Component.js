@@ -4,21 +4,11 @@ import { Card } from 'react-native-elements';
 import { TouchableNativeFeedback } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const ProfileCard = () => {
+const Analysis = () => {
     return(<Card containerStyle={styles.main}>
-        <TouchableNativeFeedback>
             <View style={styles.container}>
-                <View style={styles.col1}>
-                    <Ionicons name={'md-person'} size={50} color={'white'} />
-                </View>
-                <View style={styles.col2}>
-                    <View style={styles.detail}>
-                        <Text style={styles.text}>Amit Jha</Text>
-                        <Text style={styles.subtext}>Rank: 22222 | Percentile: 7%</Text>
-                    </View>
-                </View>
+                
             </View>
-        </TouchableNativeFeedback>
         </Card>)
 };
 
@@ -26,17 +16,17 @@ const styles = StyleSheet.create({
     main: {
         backgroundColor: '#354266',
         borderWidth: 0,
+        height: 250,
         marginBottom: 10,
-        height: 100,
         borderRadius: 5,
         padding: 0
     },
     col1: {
-        height: 70,
-        width: 70,
-        margin: 15,
-        borderRadius: 50,
-        backgroundColor: '#747c94',
+        height: 110,
+        width: "49%",
+        marginRight: 1,
+        borderRightWidth: 1,
+        borderRightColor: 'black',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -49,8 +39,12 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
     col2: {
-        flex: 1,
-        height: '100%',
+        height: 110,
+        width: "49%",
+        marginLeft: 1,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     title: {
         fontSize: 30,
@@ -65,22 +59,29 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: '100%'
     },
-    text:{
-        fontSize: 20,
-        color: 'white',
-        padding: 5,
+    innerCardCorrect: {
+        width: '80%',
+        height: '100%',
+        backgroundColor: '#3aaa65',
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
     },
-    subtext:{
-        fontSize: 15,
-        color: 'white',
-        borderRadius: 4,
-        paddingLeft: 10,
-        paddingRight: 10,
-        paddingTop: 5,
-        paddingBottom: 5,
-        backgroundColor: '#2b385c'
-    }
+    innerCardWrong: {
+        width: '80%',
+        height: '100%',
+        backgroundColor: '#d14040',
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
+    },
+    percentage: {
+        fontSize: 35,
+        fontWeight: 'bold'
+    },
 })
 
 
-export default ProfileCard;
+export default Analysis;

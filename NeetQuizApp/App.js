@@ -20,15 +20,29 @@ import Home from './src/home.page';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import User from './src/user.page';
 import LeaderBoardScreen from './src/leaderboard.page';
+import { createStackNavigator } from '@react-navigation/stack';
+import Quiz from './src/Quiz.page';
 
-const Stack = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
+const Stack = createStackNavigator();
 
 const App = () => {
+  return(
+    <NavigationContainer>
+      <Stack.Navigator headerMode={'none'}>
+        <Stack.Screen name="Home" component={TabNavigator} />
+        <Stack.Screen name="Quiz" component={Quiz} />
+      </Stack.Navigator>
+  </NavigationContainer>
+  )
+}
+ 
+
+const TabNavigator = () => {
   return (
     <>
-    <NavigationContainer>
-      <Stack.Navigator 
+      <Tab.Navigator 
       lazy={true}
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
@@ -71,17 +85,16 @@ const App = () => {
 
         }
       }}>
-        <Stack.Screen 
+        <Tab.Screen 
         name="Home" 
         component={Home}/>
-        <Stack.Screen
+        <Tab.Screen
         name = 'Leaderboard'
         component = {LeaderBoardScreen} />
-        <Stack.Screen
+        <Tab.Screen
         name="User"
         component={User} />
-      </Stack.Navigator>
-    </NavigationContainer>
+      </Tab.Navigator>
     </>
   );
 };
