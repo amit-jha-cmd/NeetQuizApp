@@ -8,7 +8,7 @@ import { TouchableNativeFeedback } from 'react-native-gesture-handler';
 const SubCard = ({title, navigation}) => {
     return(
         <Card containerStyle={styles.main}>
-        <TouchableNativeFeedback onPress={() => navigation.navigate('Quiz', {subject: title})}>
+        <TouchableNativeFeedback onPress={() => navigation.navigate('StartQuiz', {subject: title})}>
             <View style={styles.container}>
                 <Text style={styles.title}>{title}</Text>
             </View>

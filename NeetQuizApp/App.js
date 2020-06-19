@@ -21,6 +21,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import User from './src/user.page';
 import LeaderBoardScreen from './src/leaderboard.page';
 import { createStackNavigator } from '@react-navigation/stack';
+import StartQuiz from './src/StartQuiz.page';
 import Quiz from './src/Quiz.page';
 
 const Tab = createBottomTabNavigator();
@@ -32,6 +33,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator headerMode={'none'}>
         <Stack.Screen name="Home" component={TabNavigator} />
+        <Stack.Screen name="StartQuiz" component={StartQuiz} />
         <Stack.Screen name="Quiz" component={Quiz} />
       </Stack.Navigator>
   </NavigationContainer>
