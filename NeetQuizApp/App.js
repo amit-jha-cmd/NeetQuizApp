@@ -23,6 +23,8 @@ import LeaderBoardScreen from './src/leaderboard.page';
 import { createStackNavigator } from '@react-navigation/stack';
 import StartQuiz from './src/StartQuiz.page';
 import Quiz from './src/Quiz.page';
+import LoginPage from './src/Login.Page';
+import SignupPage from './src/Signup.Page';
 
 const Tab = createBottomTabNavigator();
 
@@ -32,6 +34,8 @@ const App = () => {
   return(
     <NavigationContainer>
       <Stack.Navigator headerMode={'none'}>
+        <Stack.Screen name="Login" component={LoginPage} />
+        <Stack.Screen name="Signup" component={SignupPage} />
         <Stack.Screen name="Home" component={TabNavigator} />
         <Stack.Screen name="StartQuiz" component={StartQuiz} />
         <Stack.Screen name="Quiz" component={Quiz} />
