@@ -25,6 +25,7 @@ import StartQuiz from './src/StartQuiz.page';
 import Quiz from './src/Quiz.page';
 import LoginPage from './src/Login.Page';
 import SignupPage from './src/Signup.Page';
+import ReportPage from './src/Report.Page';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,6 +38,7 @@ const App = () => {
         <Stack.Screen name="Login" component={LoginPage} />
         <Stack.Screen name="Signup" component={SignupPage} />
         <Stack.Screen name="Home" component={TabNavigator} />
+        <Stack.Screen name="Report" component={ReportPage} />
         <Stack.Screen name="StartQuiz" component={StartQuiz} />
         <Stack.Screen name="Quiz" component={Quiz} />
       </Stack.Navigator>

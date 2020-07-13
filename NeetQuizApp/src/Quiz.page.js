@@ -78,7 +78,7 @@ const Quiz = ({navigation}) => {
 
     const handleQuit = () => {
         if(!loading){
-            navigation.goBack()
+            navigation.navigate("Report", {subject: "REPORT"})
         }
     }
 
