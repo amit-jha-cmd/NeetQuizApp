@@ -7,7 +7,7 @@ import { SafeAreaView,
 import SubCard from './SubCard.component';
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Logo from './icons/icon512.png';
+import Logo from './icons/icon256.png';
 
 const LoginPage = ({navigation}) => {
     return(
@@ -23,12 +23,12 @@ const LoginPage = ({navigation}) => {
                 />  In India</Text>
                 <Input
                 placeholderTextColor={"white"}
-                dataDetectorTypes={'address'}
+                keyboardType={'email-address'}
                 inputStyle={styles.input}
                 placeholder='Email'
                 leftIcon={
                     <Icon
-                    name='user'
+                    name='envelope-o'
                     size={30}
                     color='white'
                     />
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent:'center',
         flexDirection: 'row',
-        marginBottom: 20
+        marginBottom: 20,
     },
     input: {
         color: 'white'
