@@ -3,11 +3,14 @@ import { StyleSheet, View, Text } from 'react-native';
 import { Card } from 'react-native-elements';
 import { TouchableNativeFeedback } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import SessionDetail from './SessionDetail.Component';
 
 const Analysis = () => {
     return(<Card containerStyle={styles.main}>
             <View style={styles.container}>
-                
+                <SessionDetail />
+                <SessionDetail />
+                <SessionDetail />
             </View>
         </Card>)
 };
@@ -16,7 +19,7 @@ const styles = StyleSheet.create({
     main: {
         backgroundColor: '#354266',
         borderWidth: 0,
-        height: 250,
+        // height: 250,
         marginBottom: 10,
         borderRadius: 5,
         padding: 0
@@ -56,8 +59,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
-        flexDirection: 'row',
-        height: '100%'
+        // flexDirection: 'row',
+        // height: '100%'
     },
     innerCardCorrect: {
         width: '80%',
