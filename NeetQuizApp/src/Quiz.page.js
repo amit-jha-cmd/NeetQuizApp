@@ -78,7 +78,7 @@ const Quiz = ({navigation}) => {
 
     const handleQuit = () => {
         if(!loading){
-            navigation.navigate("Report", {subject: "REPORT"})
+            navigation.replace("Report", {subject: "REPORT"})
         }
     }
 
@@ -111,7 +111,7 @@ const Quiz = ({navigation}) => {
             <View style={styles.row4}>
                 <Button 
                 onPress={handleQuit}
-                title={"Quit"} 
+                title={"Finish"} 
                 disabled={!submit}
                 buttonStyle={styles.red}
                 containerStyle={styles.canclebtn} />
