@@ -20,15 +20,37 @@ import Home from './src/home.page';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import User from './src/user.page';
 import LeaderBoardScreen from './src/leaderboard.page';
+import { createStackNavigator } from '@react-navigation/stack';
+import StartQuiz from './src/StartQuiz.page';
+import Quiz from './src/Quiz.page';
+import LoginPage from './src/Login.Page';
+import SignupPage from './src/Signup.Page';
+import ReportPage from './src/Report.Page';
 
-const Stack = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
+const Stack = createStackNavigator();
 
 const App = () => {
+  return(
+    <NavigationContainer>
+      <Stack.Navigator headerMode={'none'}>
+        <Stack.Screen name="Login" component={LoginPage} />
+        <Stack.Screen name="Signup" component={SignupPage} />
+        <Stack.Screen name="Home" component={TabNavigator} />
+        <Stack.Screen name="Report" component={ReportPage} />
+        <Stack.Screen name="StartQuiz" component={StartQuiz} />
+        <Stack.Screen name="Quiz" component={Quiz} />
+      </Stack.Navigator>
+  </NavigationContainer>
+  )
+}
+ 
+
+const TabNavigator = () => {
   return (
     <>
-    <NavigationContainer>
-      <Stack.Navigator 
+      <Tab.Navigator 
       lazy={true}
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
@@ -71,17 +93,16 @@ const App = () => {
 
         }
       }}>
-        <Stack.Screen 
+        <Tab.Screen 
         name="Home" 
         component={Home}/>
-        <Stack.Screen
+        <Tab.Screen
         name = 'Leaderboard'
         component = {LeaderBoardScreen} />
-        <Stack.Screen
+        <Tab.Screen
         name="User"
         component={User} />
-      </Stack.Navigator>
-    </NavigationContainer>
+      </Tab.Navigator>
     </>
   );
 };

@@ -15,8 +15,9 @@ const Home = ({navigation}) => {
             <Text style={styles.headerTitle}>QUIZ</Text>
         </View>
         <ScrollView>
-            <SubCard title={'ZOOLOGY'}/>
-            <SubCard title={'BOTANY'}/>
+            <SubCard navigation={navigation} title={'ZOOLOGY'}/>
+            <SubCard  navigation={navigation} title={'BOTANY'}/>
+            <SubCard  navigation={navigation} title={'ALL'}/>
         </ScrollView>
       </SafeAreaView>
     )

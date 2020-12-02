@@ -1026,10 +1026,10 @@
   dependencies:
     nanoid "^3.1.5"
 
-"@react-navigation/stack@^5.5.1":
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.5.1.tgz#95efa28edbfd1323e5ad9f01f539d43ffad8decc"
-  integrity sha512-oU2FEm+Ba6jMd5VA2WnuNfCO2HlZmGhrEX9yjBCyFj7fFCG1SB7WJdKLhZShtx3KxG/qWKphICeTLlYvkHdSpQ==
+"@react-navigation/stack@^5.7.0":
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.7.0.tgz#ba8d86919554c9c758e79493b0c828e10faec5d2"
+  integrity sha512-56Q83c5jjVyge++3FjVrvO3QvXyt5LJjFq8txE+qyvdJ4C+oK0b7vQ70ZP5fhXAUCgSvYnHAcV/DVBFz3kiDsg==
   dependencies:
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
@@ -5067,10 +5067,18 @@ react-native-gesture-handler@^1.6.1:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
-react-native-iphone-x-helper@^1.2.1:
+react-native-iphone-x-helper@^1.0.3, react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
+
+react-native-keyboard-aware-scroll-view@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/react-native-keyboard-aware-scroll-view/-/react-native-keyboard-aware-scroll-view-0.9.1.tgz#9e54b565a5f19b30bed12221d48921781f7630af"
+  integrity sha512-tBZ8rmjELN0F6t5UBp5CW3NYmZXgVnJSzVCssv/OqG2t6kiB+OUTqxNvUP24K+HARX4H+XaW0aEJSFQkQCv6KA==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-iphone-x-helper "^1.0.3"
 
 react-native-ratings@^7.2.0:
   version "7.2.0"
